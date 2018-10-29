@@ -57,7 +57,7 @@ switch (process.env.NODE_ENV) {
         var proxypath = 'http://localhost:8360';
         break;
     case 'online':
-        var proxypath = 'http://www.wl521.cn';
+        var proxypath = 'http://admin.wl521.cn';
         break;
 }
 var options = {
