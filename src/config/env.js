@@ -6,16 +6,16 @@
  * baseImgPath: 图片存放地址
  * 
  */
-let baseUrl = 'http://www.wl521.cn/admin';
+let baseUrl = 'https://www.wl521.cn/admin';
 let routerMode = 'hash';
 let baseImgPath;
 
 if (process.env.NODE_ENV == 'development') {
-    baseUrl = 'http://www.wl521.cn/admin';
+    baseUrl = 'https://www.wl521.cn/admin';
     baseImgPath = '/img/';
 } else {
-    baseUrl = '//www.wl521.cn/admin';
-    baseImgPath = '//www.wl521.cn/img/';
+    baseUrl = 'https://www.wl521.cn/admin';
+    baseImgPath = 'https://www.wl521.cn/img/';
 }
 
 export {
