@@ -1,0 +1,15 @@
+{
+    "apps": [{
+        "name": "vue2-manage",
+        "script": "build/dev-server.js",
+        "cwd": "/Volumes/soft/person/行扬中/vue2-manage",
+        "exec_mode": "fork",
+        "max_memory_restart": "256M",
+        "autorestart": true,
+        "node_args": [],
+        "args": [],
+        "env": {
+
+        }
+    }]
+}
