@@ -54,7 +54,7 @@ var context = config.dev.context
 
 switch (process.env.NODE_ENV) {
     case 'local':
-        var proxypath = 'http://localhost:8360';
+        var proxypath = 'https://www.wl521.cn';
         break;
     case 'online':
         var proxypath = 'https://www.wl521.cn';
