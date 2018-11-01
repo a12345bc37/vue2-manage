@@ -19,17 +19,17 @@ export default async(url = '', data = {}, type = 'GET', method = 'fetch') => {
     if (window.fetch && method == 'fetch') {
         //debugger;
         let requestConfig = {
-            credentials: 'include',
-            method: type,
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                'x-nideshop-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE1Mzk5NDM5NDl9.jIeyhuXPOMoKTX3scqKPIE3PAPSWvbKTeveKF2GZP_0'
-            },
-            mode: "cors",
-            cache: "force-cache"
-        }
-        debugger;
+                credentials: 'include',
+                method: type,
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                    'x-nideshop-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE1Mzk5NDM5NDl9.jIeyhuXPOMoKTX3scqKPIE3PAPSWvbKTeveKF2GZP_0'
+                },
+                mode: "cors",
+                cache: "force-cache"
+            }
+            //debugger;
         if (type == 'POST') {
             Object.defineProperty(requestConfig, 'body', {
                 value: JSON.stringify(data)

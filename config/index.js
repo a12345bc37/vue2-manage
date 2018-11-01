@@ -27,15 +27,15 @@ module.exports = {
         autoOpenBrowser: true,
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
-        proxyTable: {
-            '/admin': {
-                target: 'https://www.wl521.cn/',
-                changeOrigin: true,
-                pathRewrite: {
-                    '^/admin': 'admin'
-                }
-            }
-        },
+        // proxyTable: {
+        //     '/admin': {
+        //         target: 'https://www.wl521.cn/',
+        //         changeOrigin: true,
+        //         pathRewrite: {
+        //             '^/admin': 'admin'
+        //         }
+        //     }
+        // },
         context: [ //代理路径
             '/shopping',
             '/ugc',
