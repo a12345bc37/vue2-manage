@@ -11,6 +11,9 @@
 					<el-form-item label="文章简述" prop="subtitle">
 						<el-input v-model="foodForm.subtitle"></el-input>
 					</el-form-item>
+                    <el-form-item label="公众号链接" prop="avatar">
+						<el-input v-model="foodForm.avatar"></el-input>
+					</el-form-item>
 					<!-- <el-form-item label="文章详情" prop="content">
 						<el-input v-model="foodForm.content"></el-input>
 					</el-form-item> -->
@@ -85,13 +88,15 @@ export default {
                 categoryList: [],
                 categorySelect: "",
                 name: "",
-                description: ""
+                description: "",
+                avatar:""
             },
             foodForm: {
                 title: "",
                 subtitle: "",
                 item_pic_url: "",
-                content: ""
+                content: "",
+                avatar:""
             },
             foodrules: {
                 name: [
@@ -257,7 +262,8 @@ export default {
                                 title: "",
                                 subtitle: "",
                                 item_pic_url: "",
-                                content: ""
+                                content: "",
+                                avatar:""
 							};
 							this.$router.push({ path: 'foodlist'})
                         } else {

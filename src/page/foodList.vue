@@ -11,8 +11,8 @@
                 <el-table-column type="expand">
                   <template slot-scope="props">
                     <el-form label-position="left" inline class="demo-table-expand">
-                      <el-form-item label="文章详情">
-                        <span>{{ props.row.content }}</span>
+                      <el-form-item label="公众号链接">
+                        <span>{{ props.row.avatar }}</span>
                       </el-form-item>
                     </el-form>
                   </template>
@@ -55,6 +55,9 @@
                     </el-form-item>
                     <el-form-item label="文章简述" label-width="100px">
                         <el-input v-model="selectTable.subtitle"></el-input>
+                    </el-form-item>
+                    <el-form-item label="公众号链接" label-width="100px">
+                        <el-input v-model="selectTable.avatar"></el-input>
                     </el-form-item>
                     <el-form-item label="分类" label-width="100px">
 						<el-select v-model="selectIndex" :placeholder="selectMenu.label" @change="handleSelect" style="width:100%;">
@@ -195,6 +198,7 @@ import { quillEditor } from 'vue-quill-editor';
                     const tableData = {};
                     tableData.title = item.title;
                     tableData.subtitle = item.subtitle;
+                    tableData.avatar = item.avatar;
                     tableData.content = item.content;
                     tableData.item_id = item.id;
                     tableData.index = index;
@@ -225,7 +229,7 @@ import { quillEditor } from 'vue-quill-editor';
             },
             handleCurrentChange(val) {
                 this.currentPage = val;
-                this.offset = (val - 1)*this.limit;
+                this.offset = val;
                 this.getTopic()
             },
             expand(row, status){
@@ -246,6 +250,7 @@ import { quillEditor } from 'vue-quill-editor';
                 //debugger;
             	const category = await topicCategoryInfo({id:row.category_id});
                 this.selectTable = {...row, ...{title: restaurant.data.title, subtitle: restaurant.data.subtitle,
+                avatar:restaurant.data.avatar,
                 content:restaurant.data.content, category_name: category.data.title,item_pic_url:restaurant.data.item_pic_url}};
 
                 this.selectMenu = {label: category.name, value: row.category_id}
